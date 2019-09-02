@@ -68,7 +68,7 @@ window.onload = function() {
     if(eventsArr.includes("plus")){
       addNum();
     } else if(eventsArr.includes("minus")){
-       subtractNum(base);
+       subtractNum();
     }
     
   });
@@ -94,13 +94,17 @@ window.onload = function() {
     console.log(memory);
   }
 
-    function subtractNum(base) {
-       operationStore.length = arguments.length;
-      base = Number(operationStore[0]);
-      for (var i = 1; i < arguments.length; i++) {
-        base -= Number(arguments[i]);
+    function subtractNum() {
+      let base = operationStore[0];
+      for (var i = 1; i < operationStore.length; i++) {
+         base -= operationStore[i];
       }
-      return base;
+      elementsStore = [...operationStore];
+    operationStore = [];
+    input.value = base;
+    elementsStore = [];
+    memory.push(base);
+    console.log(memory);
     }
   
 
