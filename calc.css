@@ -1,0 +1,45 @@
+.calcWrapper{
+    margin:0 auto;
+    width:20%;
+    height:40em;
+    
+    
+}
+input[type="text"]{
+    width:11.7em;
+}
+.btn{
+    border:none;
+    border:1px solid black;
+    float:left;
+    width:2em;
+    height:3em;
+    font-weight: bolder;
+    background-color:grey;
+    color:whitesmoke;
+}
+.calcBtn{
+    width:10em;
+    
+    
+
+}
+h1{
+    width:10em;
+}
+.info{
+    float:left;
+}
+.calcScreen{
+    width:45.6%;
+    
+}
+.btnContainer{
+    display:block;
+    
+}
+.sign{
+    float:left;
+    
+
+}
