@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Basic Calculator</title>
-    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="calcoptional.css">
     <script src="calc.js"></script>
 </head>
 <body>
     <div class="calcWrapper">
-            <h1>JAVASCRIPT CALCULATOR</h1>
-        <div class="calcScreen" id="results">
+            <h1 class="calHeading">JAVASCRIPT CALCULATOR</h1>
+        
+            <p class="calcDisplay"></p>
             <input data-input ="" class="inpt"  type="text" name="display" id="display">
-            <span class="sign">sign</span>
-        </div>
+            <span class="signDisplay">sign</span>
+        
      
         <div class="calcBtn">
             <div class="btnContainer"> <button id="zero" class="btn">0</button> </div>
@@ -27,6 +28,7 @@
             <div class="btnContainer"> <button id="seven" class="btn">7</button> </div>
             <div class="btnContainer"> <button id="eight" class="btn">8</button> </div>
             <div class="btnContainer"> <button id="nine" class="btn">9</button> </div>
+            <div class="btnContainer"> <button id="dot" class="btn">.</button> </div>
             <div class="btnContainer"> <button id="equals" class="btn">=</button> </div>
             <div class="btnContainer"> <button id="add" class="btn">+</button> </div>
             <div class="btnContainer"> <button id="subtract" class="btn">-</button> </div>

@@ -1,0 +1,71 @@
+body{
+    border: none;
+    
+    
+}
+.calcWrapper{
+    display:grid;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr auto auto auto auto 1fr;
+    grid-template-areas: 
+     ". . calcHeading calcHeading . ."
+     ". inpt inpt inpt signDisplay ."
+     ". calcBtn calcBtn calcBtn calcBtn ."
+     ". calcDisplay calcDisplay calcDisplay calcDisplay .";
+}
+
+.calHeading{
+    display:grid;
+    grid-area:calcHeading;
+    width:auto;
+    align-content: center;
+}
+.inpt{
+    display: grid;
+    display:flex;
+     align-content: center;
+    grid-area:inpt;
+    align-content: center;
+    width:25em;
+    height:5em;
+    border-bottom:1px solid grey;
+    margin-bottom:0;
+}
+.signDisplay{
+    display:grid;
+    grid-area: signDisplay;
+    width:auto;
+    align-self: center;
+}
+.calcBtn{
+    display: grid;
+    grid-area: calcBtn;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "";
+    width:auto;
+    align-content:center;
+    
+    
+
+
+}
+.btn{
+    display:grid;
+    border:none;
+    border: 1px solid black;
+    background-color: #37c01417;
+    color:black;
+    font-weight: bolder;
+    font-size:auto;
+    width:100%;
+    height: 5em;
+    border-radius:12px;
+}
+.calcDisplay{
+    display:grid;
+    grid-area: calcDisplay;
+    width:auto;
+
+}

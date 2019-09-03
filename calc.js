@@ -9,6 +9,7 @@ window.onload = function() {
   let seven = document.getElementById("seven");
   let eight = document.getElementById("eight");
   let nine = document.getElementById("nine");
+  let dot = document.getElementById("dot");
   let equals = document.getElementById("equals");
   let divide = document.getElementById("divide");
   let multiply = document.getElementById("multiply");
@@ -19,10 +20,10 @@ window.onload = function() {
   let input = document.getElementById("display");
   let results = document.querySelector(".results");
 
-  let btnArr = [zero, one, two, three, four, five, six, seven, eight, nine];
+  let btnArr = [zero, one, two, three, four, five, six, seven, eight, nine, dot];
   let operatorBtn = [equals, divide, multiply, add, subtract, clear, percent];
   let operatorKey = ["=", "/", "*", "+", "-"];
-  let key = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let key = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "."];
   let elementsStore = [];
   let operationArr = [];
   let operationStore = []; // to store values from the input 
@@ -62,14 +63,27 @@ window.onload = function() {
     eventsArr.push("minus");
     console.log(eventsArr);
   });
+  multiply.addEventListener('click', function(){
+    operationStore.push(parseInt(input.value));
+    input.value = "";
+    elementsStore = [];
+    eventsArr.push("multply");
+    console.log(eventsArr);
+  })
   equals.addEventListener("click", function() {
     clickCount++;
     operationStore.push(parseInt(input.value));
+    let arrayHasEqualSigns = eventsArr.every((val) =>{
+      val == eventsArr[0]
+    })
     if(eventsArr.includes("plus")){
       addNum();
     } else if(eventsArr.includes("minus")){
        subtractNum();
+    } else if(eventsArr.includes("multiply")){
+      multiplyNum();
     }
+
     
   });
 
@@ -108,12 +122,23 @@ window.onload = function() {
     }
   
 
-  function multiplyNum() {}
+  function multiplyNum() {
+    let product = operationStore[0];
+      for (var i = 1; i < operationStore.length; i++) {
+         product *= operationStore[i];
+      }
+      elementsStore = [...operationStore];
+      operationStore = [];
+      input.value = product;
+      elementsStore = [];
+      memory.push(product);
+      console.log(memory);
+  }
 
   function divideNum() {}
 
-  function percentOf(a) {}
-
+  function percentOf() {}
+   
   /* let btnArr = [zero, one, two, three, four ]
  let numArr =[0,1,2,3,4,5,6,7,8,9,0,"/","-","=", "+","%"] */
 };
